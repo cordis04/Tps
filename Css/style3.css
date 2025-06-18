@@ -1,0 +1,95 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding: 50px;
+}
+
+h1 {
+  text-align: center;
+  color: #5a0202;
+}
+
+#game {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+#question {
+  text-align: center;
+}
+
+.choices {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.choice {
+  position: relative;
+  display: inline-block;
+}
+
+.choice label {
+  cursor: pointer;
+}
+
+.choice input[type="radio"] {
+  display: none;
+}
+
+.choice img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.choice input[type="radio"]:checked + label img {
+  transform: scale(1.1);
+}
+
+.text {
+  display: none;
+  text-align: center;
+  margin-top: 10px;
+}
+
+input[type="radio"]:checked + label .text {
+  display: block;
+}
+
+.result {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#correct-message {
+  display: none;
+  color: green;
+  font-size: 24px;
+}
+
+#incorrect-message {
+  display: none;
+  color: red;
+  font-size: 24px;
+}
+
+#correct-answer:checked ~ .result #correct-message {
+  display: block;
+}
+
+#incorrect-answer:checked ~ .result #incorrect-message {
+  display: block;
+}
